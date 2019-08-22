@@ -12,10 +12,10 @@ It is compatible with latest implementation of socket.io in node.js, and support
 
 ## Install
 
-Install the package with:
+Install the package Version 1.0 with:
 
 ```bash
-go get github.com/googollee/go-socket.io
+go get get github.com/googollee/go-engine.io@1.0;go get github.com/googollee/go-socket.io@v1.0
 ```
 
 Import it with:

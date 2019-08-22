@@ -15,6 +15,7 @@ func newWriterHelper(w io.Writer) *writerHelper {
 	}
 }
 
+// Write in writeHelper
 func (h *writerHelper) Write(p []byte) {
 	if h.err != nil {
 		return
@@ -29,6 +30,7 @@ func (h *writerHelper) Write(p []byte) {
 	}
 }
 
+// Return writeHelper error
 func (h *writerHelper) Error() error {
 	return h.err
 }

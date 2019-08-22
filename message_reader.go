@@ -39,6 +39,7 @@ func newMessageReader(bufr *bufio.Reader) (*messageReader, error) {
 	}, nil
 }
 
+// Message return Message in string
 func (r *messageReader) Message() string {
 	return r.message
 }

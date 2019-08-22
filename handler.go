@@ -98,6 +98,7 @@ func (h *socketHandler) Rooms() []string {
 	return ret
 }
 
+// Enter a room of soket.io
 func (h *socketHandler) Join(room string) error {
 	if err := h.baseHandler.broadcast.Join(h.broadcastName(room), h.socket); err != nil {
 		return err
@@ -106,6 +107,7 @@ func (h *socketHandler) Join(room string) error {
 	return nil
 }
 
+// Leave custom rom
 func (h *socketHandler) Leave(room string) error {
 	if err := h.baseHandler.broadcast.Leave(h.broadcastName(room), h.socket); err != nil {
 		return err
@@ -114,6 +116,7 @@ func (h *socketHandler) Leave(room string) error {
 	return nil
 }
 
+// Leave all rooms
 func (h *socketHandler) LeaveAll() error {
 	for room := range h.rooms {
 		if err := h.baseHandler.broadcast.Leave(h.broadcastName(room), h.socket); err != nil {
