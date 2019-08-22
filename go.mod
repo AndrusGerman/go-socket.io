@@ -1,4 +1,4 @@
-module github.com/googollee/go-socket.io
+module github.com/AndrusGerman/go-socket.io
 
 require (
 	github.com/AndrusGerman/go-engine.io v1.0.1
